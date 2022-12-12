@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.anyname{
+margin-top: 5px;
+    width: 400px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 150px 100px 150px;
+    border-radius: 2px solid red;
+   
+   
+}
+.left, .right{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.arrowButtons{
+    width: 80px;
+    height: 80px;
+
+
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    
+    gap: 5px;
+
+   justify-self: center;
+   align-self: center;
+
+    
+}
+.button1, .button2{
+    
+    border: 2px solid black;
+    text-align: center;
+    justify-items: center;
+    font-size: 40px;
+}
+.install{
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+ margin-left: 328px;
+ margin-top: 10px;
+}
