@@ -13,9 +13,9 @@ if (typeof document !== undefined){
 
     for (const it of insitems){
         it.addEventListener('click',(e)=>{
-            remSelects();
-            // e.target.classList.toggle('iclick');
-            e.target.classList.add('iclick');
+            // remSelects();
+            e.target.classList.toggle('iclick');
+            // e.target.classList.add('iclick');
         });  
     }
 
@@ -26,26 +26,34 @@ if (typeof document !== undefined){
         //fetch all item(s) selected by user for installation
         const iselect=document.querySelectorAll('.left .iclick');
 
-     
 
         if (iselect.length>0){
 
-            let sValue=iselect[0].getAttribute('id');
+            //if more than one item is selected
 
-            for (let i=0;i<rBag.length;i++){
-               
-               let rValue=rBag[i].getAttribute('id');
+            for (let j=0;j<iselect.length;j++){
 
-                if (+rValue.substring(rValue.length-1)>+sValue.substring(sValue.length-1)){
-                    bRight.insertBefore(iselect[0],rBag[i]);
-                    blnPrepend=true;
-                    break;
+                let sValue=iselect[j].getAttribute('id');
+
+                for (let i=0;i<rBag.length;i++){
+
+                    let rValue=rBag[i].getAttribute('id');
+
+                     console.log(sValue,rValue);
+
+                    if (+rValue.substring(rValue.length-1)>+sValue.substring(sValue.length-1)){
+                        bRight.insertBefore(iselect[j],rBag[i]);
+                        blnPrepend=true;
+                        break;
+                    }
                 }
-            }
 
-            if (!blnPrepend){
-                bRight.appendChild(iselect[0]);
-                blnPrepend=false;
+                if (!blnPrepend){
+                    bRight.appendChild(iselect[j]);
+                }
+
+                    blnPrepend=false;
+
             }
 
             remSelects();
@@ -56,6 +64,8 @@ if (typeof document !== undefined){
 
     });
 
+
+
     btnRemove.addEventListener('click',()=>{
         //fetch all items in right container
         const lBag=document.querySelectorAll('.left .item');
@@ -63,31 +73,31 @@ if (typeof document !== undefined){
         //fetch all item(s) selected by user for installation
         const oselect=document.querySelectorAll('.right .iclick');
 
-
-
         if (oselect.length>0){
 
-            let sValue=oselect[0].getAttribute('id');
-           
+            //Assuming more than one item is selected
 
-            for (let i=0;i<lBag.length;i++){
-               
-               let lValue=lBag[i].getAttribute('id');
+            for (j=0;j<oselect.length;j++){
+                let sValue=oselect[j].getAttribute('id');
 
-                     console.log(sValue,lValue);
+                for (let i=0;i<lBag.length;i++){
+                
+                let lValue=lBag[i].getAttribute('id');
 
-                if (+lValue.substring(lValue.length-1)>+sValue.substring(sValue.length-1)){
-                    bLeft.insertBefore(oselect[0],lBag[i]);
-                    blnPrepend=true;
-                    break;
+                        // console.log(sValue,lValue);
+
+                    if (+lValue.substring(lValue.length-1)>+sValue.substring(sValue.length-1)){
+                        bLeft.insertBefore(oselect[j],lBag[i]);
+                        blnPrepend=true;
+                        break;
+                    }
                 }
-            }
 
-            if (!blnPrepend){
-                bLeft.appendChild(oselect[0]);
-                blnPrepend=false;
+                if (!blnPrepend){
+                    bLeft.appendChild(oselect[j]);
+                }
+                    blnPrepend=false;
             }
-
             remSelects();
         }else{
 
