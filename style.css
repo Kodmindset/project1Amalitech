@@ -13,7 +13,7 @@
 .anyname{
 margin-top: 5px;
     width: 400px;
-    height: 300px;
+    height: 350px;
     display: grid;
     grid-template-columns: 150px 100px 150px;
     border-radius: 2px solid red;
@@ -53,6 +53,7 @@ margin-top: 5px;
     text-align: center;
     justify-items: center;
     font-size: 40px;
+    cursor: pointer;
 }
 .install{
     border: 1px solid black;
@@ -68,10 +69,10 @@ margin-top: 5px;
     cursor: pointer;
 }
 
-.item:hover{
-    background-color: bisque;
-    transition: all ease-out 0.5s;
-}
+/* .item:hover{
+    /* background-color: bisque;
+    transition: all ease-out 0.5s; 
+} */
 
 .iclick{
     background-color: aqua;
