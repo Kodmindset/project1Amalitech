@@ -39,7 +39,7 @@ if (typeof document !== undefined){
 
                     let rValue=rBag[i].getAttribute('id');
 
-                     console.log(sValue,rValue);
+                    //  console.log(sValue,rValue);
 
                     if (+rValue.substring(rValue.length-1)>+sValue.substring(sValue.length-1)){
                         bRight.insertBefore(iselect[j],rBag[i]);
