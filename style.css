@@ -63,3 +63,18 @@ margin-top: 5px;
  margin-left: 328px;
  margin-top: 10px;
 }
+
+.item{
+    cursor: pointer;
+}
+
+.item:hover{
+    background-color: bisque;
+    transition: all ease-out 0.5s;
+}
+
+.iclick{
+    background-color: aqua;
+    border-bottom: red;
+}
+
