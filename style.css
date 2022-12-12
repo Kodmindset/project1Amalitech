@@ -61,8 +61,10 @@ margin-top: 5px;
     font-size: 22px;
     font-weight: bold;
     border-radius: 5px;
- margin-left: 328px;
- margin-top: 10px;
+    margin-left: 328px;
+    margin-top: 10px;
+    cursor: pointer;
+
 }
 
 .item{

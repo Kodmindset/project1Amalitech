@@ -4,6 +4,7 @@ const btnAdd=document.querySelector('.button1');
 const btnRemove=document.querySelector('.button2');
 const bLeft=document.querySelector('.left');
 const bRight=document.querySelector('.right');
+const bInstall=document.querySelector('.install');
 
 
 let blnPrepend=false;
@@ -105,5 +106,14 @@ if (typeof document !== undefined){
         blnPrepend=false;
     }
 
+    bInstall.addEventListener('click',()=>{
+        //one method of removing child nodes is to set parent innerhtml to nothing
+        // bRight.innerHTML='';
 
+        //or another method
+        while (bRight.firstChild){
+            bRight.removeChild(bRight.firstChild);
+        }
+
+    });
 }
