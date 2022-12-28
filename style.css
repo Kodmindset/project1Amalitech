@@ -11,14 +11,12 @@
     align-items: center;
 }
 .anyname{
-margin-top: 5px;
+    margin-top: 5px;
     width: 400px;
     height: 350px;
     display: grid;
     grid-template-columns: 150px 100px 150px;
     border-radius: 2px solid red;
-   
-   
 }
 .left, .right{
     border: 2px solid black;
@@ -35,20 +33,16 @@ margin-top: 5px;
     width: 80px;
     height: 80px;
 
-
     display: grid;
-    
     grid-template-columns: 1fr;
     
     gap: 5px;
-
    justify-self: center;
    align-self: center;
 
     
 }
 .button1, .button2{
-    
     border: 2px solid black;
     text-align: center;
     justify-items: center;
@@ -64,7 +58,6 @@ margin-top: 5px;
     margin-left: 328px;
     margin-top: 10px;
     cursor: pointer;
-
 }
 
 .item{
